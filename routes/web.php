@@ -1,0 +1,27 @@
+<?php
+use Illuminate\Support\Facades\Route;
+ use App\Http\Controllers\HomeController;
+ use App\Http\Controllers\CategoryController;
+ use App\Http\Controllers\SubcategoryController;
+ use App\Http\Controllers\ProductdetailController;
+ use App\Http\Controllers\CartController;
+ use App\Http\Controllers\CheckoutController;
+ use App\Http\Controllers\UserController;
+ 
+ Route::get('/', function () {
+    return view('welcome');
+ });
+Route::get('/',[HomeController::class,'index']);
+Route::get('/category/{slug}',[CategoryController::class,'detail']);
+Route::get('/category/{electronice}/{slug}',[SubcategoryController::class,'detail']);
+Route::get('/category/{electronice}/tv/{slug}',[ProductdetailController::class,'detail']);
+Route::get('/cart-list/{slug}',[CartController::class,'list']);
+Route::get('/checkout/{slug}',[CheckoutController::class,'checkout']);
+Route::get('/register',[UserController::class,'register']);
+Route::get('/register1',[UserController::class,'register1']);
+Route::get('/login',[UserController::class,'login']);
+Route::get('/login1',[UserController::class,'login1']);
+//user dashboard  route start here
+Route::get('user/',[UserController::class,'index']);
+Route::get('order-history/',[UserController::class,'history']);
+Route::get('detail/',[UserController::class,'detail']);

@@ -1,0 +1,40 @@
+body{
+    font-family: 'Lato', sans-serif;;
+}
+.theme-navbar {
+    background-color:#0066cc;
+}
+.theme-navbar-light{
+    background-color:#56a3f0;
+}
+.theme-green-btn{
+    background-color:#2BA745;
+}
+.theme-green-btn:hover{
+    background-color:#2BA745;
+    opacity: 0.9;
+}
+.theme-orange-btn{
+    background-color:#ff6600;
+}
+.theme-orange-btn:hover{
+    background-color:#ff6600;
+    opacity: 0.9;
+}
+/* product-section */
+.theme-product img:hover{
+transform:scaleX(-1);
+}
+.py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+
+/* footer-section */
+.theme-footer{
+    background-color:#0066cc;
+}
+.checked{
+    color:#ff6600;
+}
