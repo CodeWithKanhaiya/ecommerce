@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Category;
+use App\Models\Product;
 class   SubcategoryController extends Controller
 {
-   public function detail($slug){
-return view('subcategory');
+   public function detail($category,$sub_category){
+   $subcat=Category::where('c_name',$sub_category)->first();
+
+return view('subcategory',['subcat'=>$subcat]);
    } 
 }

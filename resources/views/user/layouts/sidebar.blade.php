@@ -1,30 +1,39 @@
+ @php
+    $user = auth()->user();
+    $billing = null;
+    if ($user && $user->is_login) {
+        $billing = App\Models\Billing::where('user_id', $user->user_id)->first();
+    }
+    @endphp
  <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             
-                            <a class="nav-link" href="{{url('user')}}">
+                            <a class="nav-link" href="{{url('user/'.$user->user_id)}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
                            
                            
                             
-                            <a class="nav-link" href="{{url('order-history')}}">
+                            <a class="nav-link" href="{{url('user/order-history/'.$user->user_id)}}">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
                                 Order History
                             </a>
-                            <a class="nav-link" href="{{url('settings')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Settings
-                            </a>
-                             
+                           <a class="nav-link" href="{{url('user/settings/'.$user->user_id) }}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            Settings
+                        </a>
+                                                    
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                         {{ $billing->fullname ?? 'Guest' }}
                     </div>
                 </nav>
             </div>

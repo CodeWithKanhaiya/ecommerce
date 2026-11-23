@@ -19,7 +19,7 @@
                                     <form>
                                     <div class="mb-3">
                                             <div class="form-text mb-2"> Plese enter your mobile number</div>
-                                        <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="+91">
+                                        <input type="tel" class="form-control"  placeholder="+91">
                                         
                                     </div>
                                     

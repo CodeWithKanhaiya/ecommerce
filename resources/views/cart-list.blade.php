@@ -8,148 +8,158 @@
     </div>
     {{-- Cart List --}}
     <section>
-    <div class="container">
-        <div class="row my-5">
-            <div class="col-lg-12">
-                <table class="table">
-                            <thead>
-                                <tr>
-                                <th scope="col"><h3>Product</h3></th>
-                                <th scope="col"><h3>Price</h3></th>
-                                <th scope="col"><h3>Quantity</h3></th>
-                                <th scope="col"><h3>Subtotal<h3></th>
-                                 <th scope="col"><h3>Remove<h3></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                        <th>
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <img src="{{ asset('assets/images/products/9.jpg') }}" style="width:70px;" class="rounded-circle">
-                                                    </div>
-                                                    <div class="p-3"><h5> HandBag</h5></div>
-                                                </div>
-                                        </th>
-                                            <td>₹ 2944.00 </td>
-                                            <td>
-                                                 <div class="d-flex flex-row  mb-3">
-                                                    {{-- <div class="p-1"><h6>Quantity</h6></div> --}}
-                                                    <div class="p-1">
-                                                        <span class=" btn btn-secondary btn-sm rounded-start-pill"><i class="fa-solid fa-minus"></i></span>
-                                                        <span> 01</span>
-                                                        <span class="btn btn-secondary btn-sm rounded-end-pill"> <i class=" fa-solid fa-plus"></i></span>
-                                                    </div>
-                                
-                                                    </div>
-                                            </td>
-                                            <td>₹ 4400  .00</td>
-                                            <td><button type="button" class="btn-close" aria-label="Close"></button></td>
-                                </tr>
-                                
-                                 <tr>
-                                        <th>
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <img src="{{ asset('assets/images/products/5.jpg') }}" style="width:70px" class="rounded-circle">
-                                                    </div>
-                                                    <div class="p-3"><h5>Camery</h5></div>
-                                                </div>
-                                        </th>
-                                            <td>₹ 2944.00 </td>
-                                            <td>
-                                                  <div class="d-flex flex-row  mb-3">
-                                                    
-                                                    <div class="p-1">
-                                                        <span class=" btn btn-secondary btn-sm rounded-start-pill"><i class="fa-solid fa-minus"></i></span>
-                                                        <span> 01</span>
-                                                        <span class="btn btn-secondary btn-sm rounded-end-pill"> <i class=" fa-solid fa-plus"></i></span>
-                                                    </div>
-                                
-                                                    </div>
-                                            </td>
-                                            <td>₹ 4400  .00</td>
-                                            <td><button type="button" class="btn-close" aria-label="Close"></button></td>
-                                </tr>
-                                 <tr>
-                                        <th>
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <img src="{{ asset('assets/images/products/8.jpg') }}" style="width:70px" class="rounded-circle">
-                                                    </div>
-                                                    <div class="p-3"><h5>Washig Machine</h5></div>
-                                                </div>
-                                        </th>
-                                            <td>₹ 2944.00 </td>
-                                            <td>
-                                                  <div class="d-flex flex-row  mb-3">
-                                                    
-                                                    <div class="p-1">
-                                                        <span class=" btn btn-secondary btn-sm rounded-start-pill"><i class="fa-solid fa-minus"></i></span>
-                                                        <span> 01</span>
-                                                        <span class="btn btn-secondary btn-sm rounded-end-pill"> <i class=" fa-solid fa-plus"></i></span>
-                                                    </div>
-                                
-                                                    </div>
-                                            </td>
-                                            <td>₹ 4400  .00</td>
-                                            <td><button type="button" class="btn-close" aria-label="Close"></button></td>
-                                </tr>
-                                 <tr>
-                                        <th>
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <img src="{{ asset('assets/images/products/9.jpg') }}" style="width:70px" class="rounded-circle">
-                                                    </div>
-                                                    <div class="p-3"><h5>Bag</h5></div>
-                                                </div>
-                                        </th>
-                                            <td>₹ 2944.00 </td>
-                                            <td>
-                                                  <div class="d-flex flex-row  mb-3">
-                                                    <div class="p-1">
-                                                        <span class=" btn btn-secondary btn-sm rounded-start-pill"><i class="fa-solid fa-minus"></i></span>
-                                                        <span> 01</span>
-                                                        <span class="btn btn-secondary btn-sm rounded-end-pill"> <i class=" fa-solid fa-plus"></i></span>
-                                                    </div>
-                                
-                                                    </div>
-                                            </td>
-                                            <td>₹ 4400  .00</td>
-                                            <td><button type="button" class="btn-close" aria-label="Close"></button></td>
-                                </tr>
-                                
-                                
-                            </tbody>
-                            </table>
-            </div>
-            <div class="col-lg-5 ms-auto my-5">
-                <div>
-                    <h3>Price Detail</h3>
-                    <hr>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-lg-12">
+                    <table class="table" id="cart-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <h3>Product</h3>
+                                </th>
+                                <th scope="col">
+                                    <h3>Price</h3>
+                                </th>
+                                <th scope="col">
+                                    <h3>Quantity</h3>
+                                </th>
+                                <th scope="col">
+                                    <h3>Subtotal<h3>
+                                </th>
+                                <th scope="col">
+                                    <h3>Remove<h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-body">
+
+
+
+                        </tbody>
+                    </table>
+                    <div id="empty-cart-message" class="text-center my-5">
+                        <h3 class="text-muted">Your cart is empty</h3>
+                        <p class="text-muted">Your have no items in your shopping cart.</p>
+                        <a href="{{ url('/') }}" class="btn theme-orange-btn text-white rounded-pill px-4 py-2">Continue Shopping</a>
+                    </div>
                 </div>
-                    <div class="d-flex">
-                        <div><h5>SubTotal</h5></div>
-                        <div class="ms-auto"> <h5>₹ 2944.00</h5></div>
+                <div class="col-lg-5 ms-auto my-5" id="price-summary">
+
+                    <div>
+                        <h3>Price Detail</h3>
+                        <hr>
                     </div>
                     <div class="d-flex">
-                        <div><h5>Discount</h5></div>
-                        <div class="ms-auto"> <h5>₹ 200.00</h5></div>
+                        <div>
+                            <h5>SubTotal</h5>
+                        </div>
+                        <div class="ms-auto">
+                            <h5 id="subtotal">₹ 0.00</h5>
+                        </div>
                     </div>
-                     <div class="d-flex">
-                        <div><h5>Delivery Charges</h5></div>
-                        <div class="ms-auto"> <h5>FREE</h5></div>
+                    <div class="d-flex">
+                        <div>
+                            <h5>GST(18%)</h5>
+                        </div>
+                        <div class="ms-auto">
+                            <h5 id="gst">₹ 0.00</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div>
+                            <h5>Delivery Charges</h5>
+                        </div>
+                        <div class="ms-auto">
+                            <h5>FREE</h5>
+                        </div>
                     </div>
                     <hr>
                     <div class="d-flex">
-                        <div><h5>Total</h5></div>
-                        <div class="ms-auto"> <h5>2744</h5></div>
+                        <div>
+                            <h5>Total</h5>
+                        </div>
+                        <div class="ms-auto">
+                            <h5 id="total">₹ 0.00</h5>
+                        </div>
                     </div>
                     <div class="mt-4">
-                        <a href="{{url('checkout/product')}}" class="btn theme-orange-btn text-light rounded-pill w-100" >Procceed to checkout <i class="fa-solid fa-right-long"></i></a>
+                        <a href="{{ url('checkout/product') }}"
+                            class="btn theme-orange-btn text-light rounded-pill w-100">Procceed to checkout <i
+                                class="fa-solid fa-right-long"></i></a>
                     </div>
+                </div>
+
             </div>
         </div>
-        </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderCart();
+        });
+
+        function renderCart() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const cartBody = document.getElementById("cart-body");
+            const emptyMessage = document.getElementById("empty-cart-message");
+            const priceSummary = document.getElementById("price-summary");
+            const priceTable = document.getElementById("price-table");
+            const cartTable = document.getElementById("cart-table");
+
+            let subtotal = 0;
+            cartBody.innerHTML = "";
+
+            if (cart.length === 0) {
+                emptyMessage.style.display = "block";
+                priceSummary.style.display = "none";
+                cartTable.style.display = "none";
+                document.getElementById("subtotal").innerTextL = "0.00";
+                document.getElementById("gst").innerText = "0.00";
+                document.getElementById("total").innerText = "0.00";
+                return;
+            } else {
+                emptyMessage.style.display = "none";
+                priceSummary.style.display = "block";
+                cartTable.style.display = "table";
+            }
+        
+        cart.forEach((item, index) => {
+            const itemTotal=Number(item.product_price) * Number(item.quantity);
+            subtotal += itemTotal;
+            const row =
+                ` <tr> 
+                    <th>
+                    <div class="d-flex">
+                            <div>
+                                <img src="${item.image_url}" style="width:70px; object-fit:cover;" class="rounded-3">
+                            </div> 
+                            <div class="p-3">
+                                <h5> ${item.product_name}</h5>
+                            </div>
+                    </div>    
+                    </th>
+                    <td> ${Number(item.product_price).toLocaleString('en-IN')}</td>
+                    <td><h5>${item.quantity}</h5></td>
+                        <td>${itemTotal.toLocaleString('en-IN')}</td>
+                    <td>
+                        <button type="button" class="btn-close" area-label="Close" onclick="removeItem(${index})"></button>
+                        </td>
+                    </tr>`;
+                    cartBody.insertAdjacentHTML("beforeend",row);
+
+        })
+        const gst = subtotal *0.18;
+        const total=subtotal + gst;
+        document.getElementById("subtotal").innerText =`₹ ${subtotal.toLocaleString()}`;
+        document.getElementById("gst").innerText=`₹ ${gst.toLocaleString(undefined)}`;
+        document.getElementById("total").innerText=`₹ ${total.toLocaleString(undefined)}`;
+    }
+    function removeItem(index){
+        if(!confirm("Are you sure want to remove this item from the cart")) return;
+         const cart = JSON.parse(localStorage.getItem("cart")) || [];
+         cart.splice(index,1);
+         localStorage.setItem("cart",JSON.stringify(cart));
+         update_cart_count();
+         renderCart();
+    }
+    </script>
 @endsection

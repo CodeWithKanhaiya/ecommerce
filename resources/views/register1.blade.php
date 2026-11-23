@@ -7,7 +7,7 @@
         <h1 class="text-center"><i class="fa-sharp fa-solid fa-user"></i>User Register</h1>
     </div>
         <section>
-            <div class="container my-5">
+            <div class="container my-5">    
                 <div class="row">
                     <div class="col-lg-10">
                         <div class="row">
